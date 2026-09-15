@@ -18,3 +18,15 @@ df = pd.read_csv("data/sample_data.csv")
 st.write("Here's our data")
 st.dataframe(df)
 
+# grabs a string from list and names it as city
+city = st.selectbox('Select a city', df["City"].unique())
+
+st.write(f"People in {city}")
+
+# filters the dataframe to only show rows where the City column matches the selected city
+st.dataframe(df[df["City"] == city])
+
+# st.bar_chart(df["Salary"])
+
+
+# st.color_picker('Pick a color')
