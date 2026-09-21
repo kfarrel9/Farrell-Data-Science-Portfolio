@@ -28,7 +28,7 @@ with adelie_tab:
     st.header("Adelie Penguins")
 
     adelie_facts = ["Males build nests out of pebbles and will steal rocks from neighboring nests when nobody is looking.",
-    "Their feces releases ammonia that helps form clouds and fertilizes the barren Antarctic ground",
+    "Their feces releases ammonia that helps form clouds and fertilizes the barren Antarctic ground.",
     "Despite their small size, they fearlessly fight predators or humans by slapping them with their flippers."]
         
     if st.button("Show Adelie Fact"):
@@ -127,9 +127,9 @@ with chinstrap_tab:
 
     chinstrap_facts = [
     "Chinstrap penguins take more than 10,000 tiny four-second naps a day during the breeding season!", 
-    "People sometimes call them stonecracker penguins because their loud, piercing screech sounds like it could crack stone",
-    "Their poop is bright pink because they eat a diet rich in Antarctic krill. It is sometimes so bright that you can see it from space",
-    "Scientists consider them the most aggressive and grumpiest of all penguin species, often picking fights with neighbors, intruders, and even humans"]
+    "People sometimes call them stonecracker penguins because their loud, piercing screech sounds like it could crack stone.",
+    "Their poop is bright pink because they eat a diet rich in Antarctic krill. It is sometimes so bright that you can see it from space.",
+    "Scientists consider them the most aggressive and grumpiest of all penguin species, often picking fights with neighbors, intruders, and even humans."]
 
     if st.button("Show Chinstrap Fact"):
         fact = random.choice(chinstrap_facts)
