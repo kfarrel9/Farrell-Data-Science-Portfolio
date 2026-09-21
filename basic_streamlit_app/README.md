@@ -10,8 +10,8 @@ This app allows users to better understand the differences between various pengu
     <td><b>Gentoo Penguin</b></td>
   </tr>
   <tr>
-    <td><img src="[(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYfjJkHUn9ereRifooWAjrE-aynSfYtOR3IYAwotw9plS0Ph0EGv-Kh8E&s=10)]" width="300" alt="Screen 1"></td>
-    <td><img src="[image2.png](https://www.asoc.org/wp-content/uploads/2024/02/cropped-dancing-Chinstrap-penguin-787x650.png)" width="300" alt="Screen 2"></td>
-    <td><img src="[image3.png](https://cdn.download.ams.birds.cornell.edu/api/v2/asset/612764627/900)" width="300" alt="Screen 3"></td>
+    <td><img src="Adelie Penguin.png" width="300" alt="Adelie Penguin"></td>
+    <td><img src="Chinstrap Penguin.png" width="300" alt="Chinstrap Penguin"></td>
+    <td><img src="Gentoo Penguin.png" width="300" alt="Gentoo Penguin"></td>
   </tr>
 </table>
