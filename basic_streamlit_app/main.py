@@ -26,6 +26,7 @@ adelie_tab, chinstrap_tab, gentoo_tab = st.tabs(["Adelie", "Chinstrap", "Gentoo"
 with adelie_tab:
 
     st.header("Adelie Penguins")
+    st.image("images/Adelie Penguin.png", width=300)
 
     adelie_facts = ["Males build nests out of pebbles and will steal rocks from neighboring nests when nobody is looking.",
     "Their feces releases ammonia that helps form clouds and fertilizes the barren Antarctic ground.",
@@ -89,7 +90,6 @@ with adelie_tab:
             "flipper_length_mm",
             "body_mass_g"
         ],
-        key="adelie_x"
     )
 
     y_adelie = st.selectbox(
@@ -101,7 +101,6 @@ with adelie_tab:
             "body_mass_g"
         ],
         index=3,
-        key="adelie_y"
     )
 
     fig, ax = plt.subplots()
@@ -116,7 +115,26 @@ with adelie_tab:
 
     st.pyplot(fig)
 
+    # Map
+    st.subheader("Adelie Penguin Islands")
 
+    adelie_map = pd.DataFrame({
+        "island": ["Biscoe", "Dream", "Torgersen"],
+        "lat": [-64.8131, -64.7268, -64.7731],
+        "lon": [-63.7947, -64.2248, -64.0741]
+    })
+
+    selected_map = adelie_map[
+        adelie_map["island"].isin(selected_adelie_islands)
+    ]
+
+    st.map(
+        selected_map,
+        latitude="lat",
+        longitude="lon"
+    )
+
+    st.write("Map shows the locations of the selected islands.")
 
 # CHINSTRAP TAB
 ####################################
@@ -124,6 +142,7 @@ with adelie_tab:
 with chinstrap_tab:
 
     st.header("Chinstrap Penguins")
+    st.image("images/Chinstrap Penguin.png", width=300)
 
     chinstrap_facts = [
     "Chinstrap penguins take more than 10,000 tiny four-second naps a day during the breeding season!", 
@@ -182,7 +201,34 @@ with chinstrap_tab:
         str(round(average_flipper, 1)) + " mm"
     )
 
+    st.subheader("Compare Male vs. Female Chinstrap Penguins")
 
+    # Let the user choose which measurement to compare
+    measurement = st.selectbox(
+        "Choose a characteristic",
+        [
+            "body_mass_g",
+            "bill_length_mm",
+            "bill_depth_mm",
+            "flipper_length_mm"
+        ]
+    )
+
+    # Create the box plot
+    fig, ax = plt.subplots()
+
+    sns.boxplot(
+        data=filtered_chinstrap,
+        x="sex",
+        y=measurement,
+        palette={
+            "male": "blue",
+            "female": "pink"
+        },
+        ax=ax
+    )
+
+    st.pyplot(fig)
 
 # GENTOO TAB
 ###################################
@@ -190,6 +236,7 @@ with chinstrap_tab:
 with gentoo_tab:
 
     st.header("Gentoo Penguins")
+    st.image("images/Gentoo Penguin.png", width=300)
 
 
     gentoo_facts = ["Gentoo penguins are the fastest swimming penguins in the world!",
@@ -236,3 +283,39 @@ with gentoo_tab:
     col2.metric("Average Body Mass", round(average_mass), "g")
 
     col3.metric("Average Flipper Length", round(average_flipper, 1), "mm")      
+
+    st.subheader("Gentoo Body Mass Distribution")
+
+    sex_choice = st.radio(
+        "Choose which Gentoo penguins to view",
+        ["All", "Male", "Female"]
+    )
+
+    if sex_choice == "Male":
+        gentoo_graph = filtered_gentoo[
+            filtered_gentoo["sex"] == "male"
+        ]
+
+    elif sex_choice == "Female":
+        gentoo_graph = filtered_gentoo[
+            filtered_gentoo["sex"] == "female"
+        ]
+
+    else:
+        gentoo_graph = filtered_gentoo
+
+
+    fig, ax = plt.subplots()
+
+    sns.histplot(
+        data=gentoo_graph,
+        x="body_mass_g",
+        bins=10,
+        ax=ax
+    )
+
+    ax.set_xlabel("Body Mass (g)")
+    ax.set_ylabel("Number of Penguins")
+    ax.set_title("Distribution of Gentoo Body Mass")
+
+    st.pyplot(fig)
