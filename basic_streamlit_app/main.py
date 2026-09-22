@@ -78,7 +78,6 @@ with adelie_tab:
     col3.metric("Average Flipper Length", str(round(average_flipper, 1)) + " mm")
 
 
-
     # Scatterplot
     st.subheader("Explore Relationships")
 
