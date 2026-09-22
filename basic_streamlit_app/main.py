@@ -62,7 +62,7 @@ with adelie_tab:
     # Quick summary
     st.subheader("Quick Summary Statistics")
 
-    col1, col2, col3 = st.columns(3)
+    column1, column2, column3 = st.columns(3)
 
     # Find the number of Adelie penguins
     number_adelie = len(filtered_adelie)
@@ -75,11 +75,11 @@ with adelie_tab:
 
 
     # Display the statistics
-    col1.metric( "Number of Penguins",number_adelie)
+    column1.metric( "Number of Penguins",number_adelie)
 
-    col2.metric("Average Body Mass", str(round(average_mass)) + " g")
+    column2.metric("Average Body Mass", str(round(average_mass)) + " g")
 
-    col3.metric("Average Flipper Length", str(round(average_flipper, 1)) + " mm")
+    column3.metric("Average Flipper Length", str(round(average_flipper, 1)) + " mm")
 
 
     # Scatterplot
@@ -176,7 +176,7 @@ with chinstrap_tab:
 
     st.subheader("Quick Summary Statistics")
 
-    col1, col2, col3 = st.columns(3)
+    column1, column2, column3 = st.columns(3)
 
    # Find the number of Chinstrap penguins
     number_chinstrap = len(filtered_chinstrap)
@@ -189,17 +189,17 @@ with chinstrap_tab:
 
 
     # Display the statistics
-    col1.metric(
+    column1.metric(
         "Number of Penguins",
         number_chinstrap
     )
 
-    col2.metric(
+    column2.metric(
         "Average Body Mass",
         str(round(average_mass)) + " g"
     )
 
-    col3.metric(
+    column3.metric(
         "Average Flipper Length",
         str(round(average_flipper, 1)) + " mm"
     )
@@ -269,7 +269,7 @@ with gentoo_tab:
 
     st.subheader("Quick Summary Statistics")
 
-    col1, col2, col3 = st.columns(3)
+    column1, column2, column3 = st.columns(3)
 
    # Find the number of Gentoo penguins
     number_gentoo = len(filtered_gentoo)
@@ -281,11 +281,11 @@ with gentoo_tab:
     average_flipper = filtered_gentoo["flipper_length_mm"].mean()
 
     # Display the statistics
-    col1.metric("Number of Penguins", number_gentoo)
+    column1.metric("Number of Penguins", number_gentoo)
 
-    col2.metric("Average Body Mass", round(average_mass), "g")
+    column2.metric("Average Body Mass", round(average_mass), "g")
 
-    col3.metric("Average Flipper Length", round(average_flipper, 1), "mm")      
+    column3.metric("Average Flipper Length", round(average_flipper, 1), "mm")      
 
     st.subheader("Gentoo Body Mass Distribution")
 
