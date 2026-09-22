@@ -11,7 +11,11 @@ penguins = pd.read_csv("data/penguins.csv")
 # Title and description
 st.title("Palmer Penguins Explorer")
 
-st.write("Explore different penguin species, filter them by island, and compare their characteristics.")
+st.write(
+    "Learn more about Adelie, Chinstrap, and Gentoo penguins. "
+    "Filter the data and compare different characteristics between the species. "
+    "Explore maps, summary statistics, and visualizations throughout the app."
+)
 
 if st.button("Click if you love penguins!"):
     st.balloons()
@@ -56,7 +60,7 @@ with adelie_tab:
     filtered_adelie = adelie[adelie["island"].isin(selected_adelie_islands)]
 
     # Quick summary
-    st.subheader("Quick Summary")
+    st.subheader("Quick Summary Statistics")
 
     col1, col2, col3 = st.columns(3)
 
@@ -79,7 +83,7 @@ with adelie_tab:
 
 
     # Scatterplot
-    st.subheader("Explore Relationships")
+    st.subheader("Explore Relationships Between Features Of Adelie Penguins")
 
     x_adelie = st.selectbox(
         "Choose x-axis",
@@ -115,7 +119,7 @@ with adelie_tab:
     st.pyplot(fig)
 
     # Map
-    st.subheader("Adelie Penguin Islands")
+    st.subheader("Map Of Adelie Penguin Islands")
 
     adelie_map = pd.DataFrame({
         "island": ["Biscoe", "Dream", "Torgersen"],
@@ -170,7 +174,7 @@ with chinstrap_tab:
 
     filtered_chinstrap = chinstrap[chinstrap["island"].isin(selected_chinstrap_islands)]
 
-    st.subheader("Quick Summary")
+    st.subheader("Quick Summary Statistics")
 
     col1, col2, col3 = st.columns(3)
 
@@ -263,7 +267,7 @@ with gentoo_tab:
 
     filtered_gentoo = gentoo[ gentoo["island"].isin(selected_gentoo_islands)]
 
-    st.subheader("Quick Summary")
+    st.subheader("Quick Summary Statistics")
 
     col1, col2, col3 = st.columns(3)
 
