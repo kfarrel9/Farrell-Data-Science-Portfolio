@@ -9,7 +9,7 @@ This repository serves as my Data Science portfolio for Fall 2026. It will conta
 
 An interactive Streamlit app that allows users to explore Adelie, Chinstrap, and Gentoo penguins through filters, summary statistics, maps, and visualizations. Users can compare penguins based on gender, physical characteristics, and the different islands they inhabit.
 
-[View the Penguin App Project](https://github.com/kfarrel9/Farrell-Data-Science-Portfolio/tree/main/basic_streamlit_app)
+[View the Palmers Penguins Explorer](https://github.com/kfarrel9/Farrell-Data-Science-Portfolio/tree/main/basic_streamlit_app)
 
 ## Organization
 As I add projects, I plan to organize this repository into folders for:
