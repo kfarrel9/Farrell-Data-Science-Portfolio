@@ -83,6 +83,6 @@ The heatmap shows differences in male and female medal entries across the top te
 This project shows how tidy data principles can be used to reorganize a dataset so that it is easier to work with and analyze. By melting the original Olympic dataset, removing null values, and seperating gender and sport into their own columns, useful pivot tabels and visualizations were able to be created. These visualizations showed which sports had the highest number of medal enteries, and showed how medal enteries varied by gender across various sports. However, this dataset records individual athlete medal entries which means that every member on a team sport was recorded to earn a medal. This could potentially lead to a skewed medal count for team sports. A more useful dataset would include only the unique Olympic medals awarded.
 
 ### References
-- [Wickham, Hadley (2014). Tidy Data] (https://vita.had.co.nz/papers/tidy-data.pdf)
-- [2008 Olympic Medalists Dataset] (https://edjnet.github.io/OlympicsGoNUTS/2008/)
+- [Wickham, Hadley (2014). Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf)
+- [2008 Olympic Medalists Dataset](https://edjnet.github.io/OlympicsGoNUTS/2008/)
 - [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
