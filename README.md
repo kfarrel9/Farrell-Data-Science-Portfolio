@@ -15,7 +15,7 @@ An interactive Streamlit app that allows users to explore Adelie, Chinstrap, and
 
 A Jupyter Notebook that uses Python and Pandas to clean and reorganzie data from the 2008 Olympics using tidy data principles. The project includes pivot tables, bar charts, and heatmaps to compare medal entries across sports, medal type, and gender. This project demonstrates my data cleaning, reshaping and data analysis skills.
 
-[View the Tidy Data Project]()
+[View the Tidy Data Project](https://github.com/kfarrel9/Farrell-Data-Science-Portfolio/tree/main/TidyData-Project)
 
 ## Organization
 As I add projects, I plan to organize this repository into folders for:
