@@ -1,9 +1,7 @@
 # Tidy Data Project: 2008 Olympic Medalists
 
 ### Project Overview
-The goal of this project is to clean/ reorganzie data from the 2008 Olympics using Python and Pandas. The original dataset contains medalists names and seperate columns for difference sports and genders. By applying tidy data principles, I restructed the dataset to make it easier to analyze by sport type, medal types and genders.
-
-Pivot tables and visulatzations are used to explore patterns in the cleaned data.
+The goal of this project is to clean/ reorganzie data from the 2008 Olympics using Python and Pandas. The original dataset contains medalists names and seperate columns for difference sports and genders. By applying tidy data principles, I restructed the dataset to make it easier to analyze by sport type, medal types and genders. Pivot tables and visulatzations are used to explore patterns in the cleaned data.
 
 ### Original Dataset
 
