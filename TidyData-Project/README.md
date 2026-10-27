@@ -68,7 +68,7 @@ Next, I wanted to compare the number of male and female entries across Olympic s
 For the visualization, I used the second pivot table to creaet a heatmap comparing male and female medal entries across the top ten sports. The reason a heatmap was selected for the visualization of this data is becasue the different shades of reds make it very easy to see which sports have higher or lower medal amounts for each gender.
 
 #### Visualization 3 Interpretations
-The heatmap shows differences in male and female medal entries across the top ten sports. Some sports had similar numbers of entries for both genders, such as athletics and association football; however, other sports had much larger differecnes. These differences could be related to the opportunities offered throughout the sports to the different genders, therefore, it is not fair to assume that the medal count differeces between genders is due to athletic performance alone.
+The heatmap shows differences in male and female medal entries across the top ten sports. Some sports had similar numbers of entries for both genders, such as athletics and association football; however, other sports had much larger differences. These differences could be related to the opportunities offered throughout the sports to the different genders, therefore, it is not fair to assume that the medal count differeces between genders is due to athletic performance alone.
 
 ### How to Run the Project
 
@@ -82,7 +82,7 @@ The heatmap shows differences in male and female medal entries across the top te
 
 ### Conclusions
 
-This project shows how tidy data principles can be used to reorganize a dataset so that it is easier to work with and analyze. By melting the original Olympic dataset, removing null values, and seperating gender and sport into their own columns, useful pivot tabels and visualizations were able to be created. These visualizations showed which sports had the highest number of medal enteries, and showed how medal enteries varied by gender across various sports. However, this dataset records individual athlete medal entries which means that every member on a team sport was recorded to earn a medal. Thsi could potentially lead to a skewed medal count for team sports. A more useful dataset would include only the unique Olympic medals awarded.
+This project shows how tidy data principles can be used to reorganize a dataset so that it is easier to work with and analyze. By melting the original Olympic dataset, removing null values, and seperating gender and sport into their own columns, useful pivot tabels and visualizations were able to be created. These visualizations showed which sports had the highest number of medal enteries, and showed how medal enteries varied by gender across various sports. However, this dataset records individual athlete medal entries which means that every member on a team sport was recorded to earn a medal. This could potentially lead to a skewed medal count for team sports. A more useful dataset would include only the unique Olympic medals awarded.
 
 ### References
 - [Wickham, Hadley (2014). Tidy Data] (https://vita.had.co.nz/papers/tidy-data.pdf)
