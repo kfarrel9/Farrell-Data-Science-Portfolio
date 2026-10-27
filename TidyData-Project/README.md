@@ -85,3 +85,4 @@ This project shows how tidy data principles can be used to reorganize a dataset 
 ### References
 - [Wickham, Hadley (2014). Tidy Data] (https://vita.had.co.nz/papers/tidy-data.pdf)
 - [2008 Olympic Medalists Dataset] (https://edjnet.github.io/OlympicsGoNUTS/2008/)
+- [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
