@@ -48,9 +48,10 @@ if df.empty:
 ### DISPLAY DATA
 
 # Display first five rows
+st.divider()
 st.subheader("Dataset Preview")
 st.dataframe(df.head())
-st.divider()
+
 
 ### SELECT TARGET
 # Select target variable
