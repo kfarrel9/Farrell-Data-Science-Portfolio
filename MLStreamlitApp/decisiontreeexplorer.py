@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, roc_auc_score
 
 # Introduce the App
-st.title("Machine Learning Streamlit App")
+st.title("Decision Tree Explorer")
 
 st.write( "This app allows you to upload your own CSV dataset or use the" \
          " provided Breast Cancer Wisconsin dataset to train a Decision Tree Classifier. "\
@@ -50,7 +50,7 @@ if df.empty:
 # Display first five rows
 st.subheader("Dataset Preview")
 st.dataframe(df.head())
-
+st.divider()
 
 ### SELECT TARGET
 # Select target variable
@@ -61,10 +61,13 @@ target = st.sidebar.selectbox("Choose target column", df.columns)
 X = df.drop(columns=[target])
 y = df[target]
 
+
 # Preview features and target
+st.divider()
 st.subheader("Selected Target")
 st.write("Target variable:", target)
 st.write(y.head())
+
 
 # Check if target is suitable for classification (two target categories)
 if y.nunique() != 2:
@@ -79,8 +82,10 @@ y = y.map({categories[0]: 0, categories[1]: 1})
 X = pd.get_dummies(X, drop_first=True)
 
 # Preview features
+st.divider()
 st.subheader("Predictor Variables")
 st.dataframe(X.head())
+
 
 
 
@@ -115,6 +120,7 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 
 # Model performance
+st.divider()
 st.subheader("Model Performance")
 
 st.write("Accuracy:", round(accuracy, 2))
@@ -134,6 +140,8 @@ st.write("The model's AUC is", round(roc_auc, 2), ". This measures how well the"
 " model distinguishes between the two categories. An AUC closer to 1 indicates better performance," \
 " while an AUC of 0.5 indicates performance similar to random guessing.")
 
+st.metric("Accuracy", str(round(accuracy * 100, 1)) + "%")
+st.metric("AUC", round(roc_auc, 2))
 
 # Plot ROC curve
 plt.figure(figsize=(8, 6))
@@ -148,6 +156,7 @@ st.pyplot(plt.gcf())
 plt.close()
 
 # Explain model performance
+st.divider()
 st.subheader("Understanding the Results")
 
 st.write("The model's accuracy is", round(accuracy * 100, 1),
@@ -163,6 +172,7 @@ st.write("The model's AUC is", round(roc_auc, 2),
          ". AUC is the area under the ROC curve and measures how well the model distinguishes between the two classes. An AUC closer to 1 indicates better performance.")
 
 # Explain hyperparameters
+st.divider()
 st.subheader("Understanding the Hyperparameters")
 
 st.write("The maximum tree depth is currently set to", max_depth,
