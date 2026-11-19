@@ -13,6 +13,16 @@ An interactive Streamlit app that allows users to explore Adelie, Chinstrap, and
 
 [View the Palmers Penguins Explorer](https://github.com/kfarrel9/Farrell-Data-Science-Portfolio/tree/main/basic_streamlit_app)
 
+#### Machine Learning Streamlit App
+
+An interactive Streamlit app that allows users to upload their own CSV datasets (or use a sample breast cancer data set) to train a Decision Tree Classifier. Users are able to select a target variable, then they are able to adjust the max tree depth and minimum samples to split. The model's performance can than be viewed through accuracy, precision, recall, F1-score, AUC, and an ROC curve.
+
+This project built on the supervised machine learning techniques learned in Intro to Data Science. These skills include train/test splitting, decsion trees, hyperparameter tuning, and evaluting the model(s). It demonstartes how Python and Streamlit can be used to create an interactive machine learning app.
+
+[View the Machine Learning Project](https://github.com/kfarrel9/Farrell-Data-Science-Portfolio/tree/main/MLStreamlitApp)
+
+[View the Live Streamlit App](https://farrell-ml-classifier.streamlit.app/)
+
 ### Data Cleaning and Data Analysis Projects
 #### Tidy Data project - 2008 Olympic Medalists
 
