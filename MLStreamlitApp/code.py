@@ -106,7 +106,11 @@ accuracy = accuracy_score(y_test, y_pred)
 
 # Model performance
 st.subheader("Model Performance")
-st.write("Accuracy:", accuracy)
+
+st.write("Accuracy:", round(accuracy, 2))
+st.write("The model correctly classified", round(accuracy * 100, 1), "% of the" \
+" observations in the testing dataset.")
+
 st.write("Classification Report:")
 st.text(classification_report(y_test, y_pred))
 
@@ -116,10 +120,14 @@ y_probs = model.predict_proba(X_test)[:, 1]
 fpr, tpr, thresholds = roc_curve(y_test, y_probs)
 roc_auc = roc_auc_score(y_test, y_probs)
 st.write("AUC:", round(roc_auc, 2))
+st.write("The model's AUC is", round(roc_auc, 2), ". This measures how well the" \
+" model distinguishes between the two categories. An AUC closer to 1 indicates better performance," \
+" while an AUC of 0.5 indicates performance similar to random guessing.")
+
 
 # Plot ROC curve
 plt.figure(figsize=(8, 6))
-plt.plot(fpr, tpr, label=f'AUC = {roc_auc:.2f}')
+plt.plot(fpr, tpr, label="AUC = " + str(round(roc_auc, 2)))
 plt.plot([0, 1], [0, 1], linestyle='--')
 plt.xlabel("False Positive Rate")
 plt.ylabel("True Positive Rate")
@@ -132,19 +140,23 @@ plt.close()
 # Explain model performance
 st.subheader("Understanding the Results")
 
-st.write("Accuracy: The proportion of test observations the model predicted correctly.")
+st.write("The model's accuracy is", round(accuracy * 100, 1),
+         "%. This means the model correctly predicted",
+         round(accuracy * 100, 1),
+         "% of the observations in the testing dataset.")
 
-st.write("Precision: Of the observations predicted to be in a category, how many actually belonged to that category.")
+st.write("Precision tells us what proportion of the observations predicted to be in a certain class actually belonged to that class. The precision for each class is shown in the classification report above.")
+st.write("Recall tells us what proportion of the observations that actually belonged to a certain class were correctly identified by the model. Recall is also called sensitivity for the positive class.")
+st.write("The F1-score combines precision and recall into one measure. A higher F1-score indicates a better balance between the two. The F1-score for each class is shown in the classification report above.")
 
-st.write("Recall: Of the observations actually in a category, how many the model correctly identified.")
-
-st.write("F1-Score: A measure that combines precision and recall.")
-
-st.write("AUC: Measures how well the model separates the two categories. A value closer to 1 indicates better performance.")
+st.write("The model's AUC is", round(roc_auc, 2),
+         ". AUC is the area under the ROC curve and measures how well the model distinguishes between the two classes. An AUC closer to 1 indicates better performance.")
 
 # Explain hyperparameters
 st.subheader("Understanding the Hyperparameters")
 
-st.write("Maximum Tree Depth: The maximum number of levels the decision tree can grow. A higher value allows for a more complex tree, but can lead to overfitting.")
+st.write("The maximum tree depth is currently set to", max_depth,
+         ". This controls how deep the decision tree can grow. A higher value allows for a more complex tree, but can lead to overfitting.")
 
-st.write("Minimum Samples to Split: The minimum number of observations needed at a node for the tree to split. A higher value generally results in a simpler tree.")
+st.write("The minimum samples to split is currently set to", min_samples_split,
+         ". This controls the minimum number of observations needed at a node for the tree to split. A higher value generally results in a simpler tree.")
