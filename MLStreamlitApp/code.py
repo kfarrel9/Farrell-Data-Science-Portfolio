@@ -1,3 +1,11 @@
+# code for machine learning streamlit app
+
+import streamlit as st
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.metrics import roc_curve, roc_auc_score
+
 # Introduce the App
 st.title("Machine Learning Streamlit App")
 
@@ -7,13 +15,6 @@ st.write( "This app allows you to upload your own CSV dataset or use the" \
          " and see how well the model performs on the testing data. To get started, use the left sidebar" \
          " to upload a dataset, select your target variable, and adjust the hyperparameters.")
 
-# code for machine learning streamlit app
-
-import streamlit as st
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.metrics import roc_curve, roc_auc_score
 
 # Upload dataset
 st.sidebar.header("1. Upload Data (Classification Model)")
