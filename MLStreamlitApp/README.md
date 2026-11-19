@@ -82,6 +82,6 @@ streamlit run MLStreamlitApp/code.py
 
 
 ### References
-[Breast Cancer Wisconsin Dataset](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)
-[Scikit-learn Decision Tree Documentation](https://scikit-learn.org/stable/modules/tree.html)
-[Streamlit Documentation](https://docs.streamlit.io/)
+- [Breast Cancer Wisconsin Dataset](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)
+- [Scikit-learn Decision Tree Documentation](https://scikit-learn.org/stable/modules/tree.html)
+- [Streamlit Documentation](https://docs.streamlit.io/)
