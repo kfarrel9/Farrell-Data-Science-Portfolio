@@ -1,3 +1,12 @@
+# Introduce the App
+st.title("Machine Learning Streamlit App")
+
+st.write( "This app allows you to upload your own CSV dataset or use the" \
+         " provided Breast Cancer Wisconsin dataset to train a Decision Tree Classifier. "\
+         " You can select a target variable with two categories, adjust the model's hyperparameters,"\
+         " and see how well the model performs on the testing data. To get started, use the left sidebar" \
+         " to upload a dataset, select your target variable, and adjust the hyperparameters.")
+
 # code for machine learning streamlit app
 
 import streamlit as st
